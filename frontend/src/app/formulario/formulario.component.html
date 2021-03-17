@@ -1,0 +1,13 @@
+<div class="formulario">
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="data.nombre">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Apellido</mat-label>
+    <input matInput [(ngModel)]="data.apellido">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="enviar()">Aceptar</button>
+</div>
