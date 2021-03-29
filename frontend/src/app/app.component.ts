@@ -8,7 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'frontend';
 
+  datos = {
+    nombre : 'Luis',
+    apellido : 'Perez'
+  }
   mostrar(data : any) {
-    alert(`NOMBRE: ${data.nombre} - APELLIDO : ${data.apellido}`);
+    // alert(`NOMBRE: ${data.nombre} - APELLIDO : ${data.apellido}`);
+    alert('NOMBRE: ' + data.nombre + ' - APELLIDO : ' + data.apellido);
+  }
+
+  clickBoton() {
+    alert('Has oprimido el boton.');
   }
 }

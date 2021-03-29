@@ -9,11 +9,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BotonComponent } from './boton/boton.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioComponent
+    FormularioComponent,
+    BotonComponent
   ],
   imports: [
     BrowserModule,

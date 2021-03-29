@@ -9,5 +9,6 @@
     <input matInput [(ngModel)]="data.apellido">
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="enviar()">Aceptar</button>
+  <!-- <button mat-raised-button color="primary" (click)="enviar()">Aceptar</button> -->
+  <boton [text]="'Aceptar'" (action)="enviar()"></boton>
 </div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'formulario',
@@ -7,9 +7,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  data = {
-    nombre : '',
-    apellido : ''
+  @Input('data') data = {
+    nombre : 'Pedro',
+    apellido : 'Lopez'
   }
 
   @Output('enviar') enviarEvent : EventEmitter<any> = new EventEmitter<any>();
