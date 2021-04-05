@@ -1,0 +1,23 @@
+<div  [formGroup]="form" class="formulario">
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nombre completo</mat-label>
+    <input matInput type="text" formControlName="nombre">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Contraseña</mat-label>
+    <input matInput type="password" formControlName="contrasena">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Re-Contraseña</mat-label>
+    <input matInput type="password" [disabled]="form.controls.contrasena.invalid">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="aceptar()">Crear</button>
+</div>
