@@ -1,0 +1,19 @@
+.formulario {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.formulario mat-form-field {
+  width : calc(100% - 12px);
+}
+
+.button-bar {
+  width : calc(100% - 12px);
+  display : flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

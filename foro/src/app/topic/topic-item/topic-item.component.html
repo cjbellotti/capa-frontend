@@ -1,0 +1,15 @@
+<div class="topic-item">
+  <div class="cabecera">
+    <h1>{{ data.asunto }}</h1>
+    <h3><strong>Creado por </strong> {{ data.usuarioCreador }}</h3>
+  </div>
+  <div class="separador">
+
+  </div>
+  <div class="info">
+    <span><strong>Visualizaciones: </strong> {{ data.visualizaciones }}</span>
+    <span><strong>Respuestas: </strong>{{ data.respuestas }}</span>
+    <span><strong>Fecha ultima respuesta</strong></span>
+    <span>{{ data.fechaUltimaRespuesta | date : 'dd/MM/yyyy hh:mm' }}</span>
+  </div>
+</div>
