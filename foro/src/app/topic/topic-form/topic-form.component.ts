@@ -25,7 +25,13 @@ export class TopicFormComponent implements OnInit {
   }
 
   enviar() {
-    this.enviarEvent.emit(this.form.value);
+    this.enviarEvent.emit({
+      ...this.form.value,
+      usuarioCreador : 'Pepe',
+      visualizaciones : 0,
+      respuestas : 0,
+      fechaUltimaRespuesta : new Date(),
+    });
   }
 
 }

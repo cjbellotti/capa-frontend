@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="toolbar">
+  <span>Foro</span>
+
+  <div class="comandos">
+    <img src="assets/avatar.jpg" alt="">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<div class="container">
+  <div class="container-commands">
+    <button mat-fab matTooltip="Asunto nuevo" (click)="nuevo()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div class="container-content">
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { TopicComponent } from './components/components.module';
+import { TopicService } from './services/services.module';
 
 @Component({
   selector: 'app-root',
@@ -8,30 +11,37 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'foro';
 
-  topics = [
-    {
-      asunto : 'Un Asunto',
-      usuarioCreador : 'Pepe',
-      visualizaciones : 150,
-      respuestas : 7,
-      fechaUltimaRespuesta : new Date()
-    },
-    {
-      asunto : 'Un Asunto 2',
-      usuarioCreador : 'Pepe',
-      visualizaciones : 150,
-      respuestas : 7,
-      fechaUltimaRespuesta : new Date()
-    },
-    {
-      asunto : 'Un Asunto 3',
-      usuarioCreador : 'Pepe',
-      visualizaciones : 150,
-      respuestas : 7,
-      fechaUltimaRespuesta : new Date()
-    },
-  ];
+  topics = [];
 
+  constructor(
+    private _topicService : TopicService,
+    private _dialog : MatDialog
+  ) {}
+
+  ngOnInit() {
+    this.cargar();
+  }
+
+  cargar() {
+    this._topicService.getAll()
+      .then(topics => {
+        this.topics = topics;
+      })
+      .catch(err => {
+        alert('Ocurrio un error cargando los topicos.');
+      })
+  }
+  nuevo() {
+    let dialogRef = this._dialog.open(TopicComponent, {
+      width : '70vw',
+      disableClose : true
+    })
+
+    dialogRef.componentInstance.hechoEvent.subscribe(() => {
+      dialogRef.close();
+      this.cargar();
+    });
+  }
   mostrar(data : any) {
     console.log(data);
   }

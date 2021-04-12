@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { UsuarioModule } from '@app/usuarios';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopicModule } from './topic/topic.module';
+import { MainModule } from './main/main.module';
+import { ComponentsModule } from './components/components.module';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { TopicModule } from './topic/topic.module';
     AppRoutingModule,
     UsuarioModule,
     TopicModule,
+    MainModule,
+    ComponentsModule,
+    ServicesModule,
     BrowserAnimationsModule
   ],
   providers: [],

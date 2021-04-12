@@ -1,4 +1,8 @@
 <!-- <usuario-form (aceptar)="mostrar($event)"></usuario-form> -->
 <!-- <topic-form></topic-form> -->
 <!-- <topic-item></topic-item> -->
-<topic-list [topics]="topics"></topic-list>
+<!-- <topic-list [topics]="topics"></topic-list> -->
+
+<main-page (nuevo)="nuevo()">
+  <topic-list [topics]="topics"></topic-list>
+</main-page>
