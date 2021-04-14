@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { TopicComponent } from './components/components.module';
 import { TopicService } from './services/services.module';
 
@@ -11,38 +12,12 @@ import { TopicService } from './services/services.module';
 export class AppComponent {
   title = 'foro';
 
-  topics = [];
-
   constructor(
-    private _topicService : TopicService,
-    private _dialog : MatDialog
-  ) {}
+    private _router : Router
+  ) {
 
-  ngOnInit() {
-    this.cargar();
   }
-
-  cargar() {
-    this._topicService.getAll()
-      .then(topics => {
-        this.topics = topics;
-      })
-      .catch(err => {
-        alert('Ocurrio un error cargando los topicos.');
-      })
-  }
-  nuevo() {
-    let dialogRef = this._dialog.open(TopicComponent, {
-      width : '70vw',
-      disableClose : true
-    })
-
-    dialogRef.componentInstance.hechoEvent.subscribe(() => {
-      dialogRef.close();
-      this.cargar();
-    });
-  }
-  mostrar(data : any) {
-    console.log(data);
+  salir() {
+    this._router.navigate(['login']);
   }
 }

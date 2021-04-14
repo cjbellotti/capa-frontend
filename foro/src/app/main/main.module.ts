@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MainPageComponent } from './main-page/main-page.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,6 +17,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatIconModule,
     MatButtonModule,
     MatTooltipModule,
+    RouterModule,
   ],
   exports : [
     MainPageComponent

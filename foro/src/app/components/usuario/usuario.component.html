@@ -1,0 +1,11 @@
+<div class="usuario-form">
+  <div class="form-bar">
+    <h2>Registrar usuario</h2>
+    <button mat-icon-button (click)="cerrar()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="form-content">
+    <usuario-form (aceptar)="aceptar($event)"></usuario-form>
+  </div>
+</div>

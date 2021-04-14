@@ -7,14 +7,14 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  @Output('nuevo') nuevoEvent : EventEmitter<void> = new EventEmitter<void>();
+  @Output('salir') salirEvent : EventEmitter<void> = new EventEmitter<void>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  nuevo() {
-    this.nuevoEvent.emit();
+  salir() {
+    this.salirEvent.emit();
   }
-
 }

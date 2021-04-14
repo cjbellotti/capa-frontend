@@ -1,11 +1,3 @@
-<div class="topic-form">
-  <div class="form-bar">
-    <h2>Asunto nuevo</h2>
-    <button mat-icon-button (click)="cerrar()">
-      <mat-icon>close</mat-icon>
-    </button>
-  </div>
-  <div class="form-content">
-    <topic-form (enviar)="enviar($event)"></topic-form>
-  </div>
-</div>
+<dialog-layout [titulo]="'Asunto nuevo'" (close)="cerrar()">
+  <topic-form (enviar)="enviar($event)"></topic-form>
+</dialog-layout>

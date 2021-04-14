@@ -4,18 +4,23 @@ import { UsuarioFormComponent } from './usuario-form/usuario-form.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [UsuarioFormComponent],
+  declarations: [UsuarioFormComponent, LoginComponent],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
   ],
   exports : [
-    UsuarioFormComponent
+    UsuarioFormComponent,
+    LoginComponent
   ]
 })
 export class UsuarioModule { }
+export * from './usuario-form/usuario-form.component';
