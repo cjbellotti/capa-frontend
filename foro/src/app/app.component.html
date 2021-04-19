@@ -3,6 +3,8 @@
 <!-- <topic-item></topic-item> -->
 <!-- <topic-list [topics]="topics"></topic-list> -->
 
-<main-page (salir)="salir()">
+<main-page (salir)="salir()" [loggedIn]="usuarioService.loggedIn">
+  <a [routerLink]="['tabla']" *ngIf="usuarioService.loggedIn">Ir a Tabla</a>
+  <dropdown [options]="opciones"></dropdown>
   <router-outlet></router-outlet>
 </main-page>

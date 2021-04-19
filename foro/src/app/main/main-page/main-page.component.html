@@ -1,7 +1,7 @@
 <mat-toolbar color="primary" class="toolbar">
   <span>Foro</span>
 
-  <div class="comandos">
+  <div class="comandos" *ngIf="loggedIn">
     <img src="assets/avatar.jpg" alt="">
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="salir()">
       <mat-icon>exit_to_app</mat-icon>

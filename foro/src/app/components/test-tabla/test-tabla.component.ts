@@ -23,4 +23,11 @@ export class TestTablaComponent implements OnInit {
       })
   }
 
+  editar(id : number) {
+    
+  }
+
+  borrar(id : number) {
+
+  }
 }

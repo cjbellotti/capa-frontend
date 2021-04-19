@@ -1,0 +1,11 @@
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height : 34px;
+  border : 1px solid #ccccff;
+}
+
+.toggle-button {
+  cursor : pointer;
+}

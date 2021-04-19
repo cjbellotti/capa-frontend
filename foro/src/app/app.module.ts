@@ -9,6 +9,8 @@ import { TopicModule } from './topic/topic.module';
 import { MainModule } from './main/main.module';
 import { ComponentsModule } from './components/components.module';
 import { ServicesModule } from './services/services.module';
+import { GuardsModule } from './guards/guards.module';
+import { DropdownModule } from './dropdown/dropdown.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ServicesModule } from './services/services.module';
     MainModule,
     ComponentsModule,
     ServicesModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    GuardsModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

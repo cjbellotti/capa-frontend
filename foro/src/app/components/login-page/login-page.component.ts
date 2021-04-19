@@ -18,21 +18,28 @@ export class LoginPageComponent implements OnInit {
   }
 
   ingresar(loginData : any) {
-    debugger;
-    this._usuarioService.getByEmail(loginData.email)
-      .then(usuario => {
-        if (usuario != null) {
-          if (usuario.contrasena === loginData.contrasena) {
-            this._router.navigate(['']);
-          } else {
-            alert('Contraseña invalida.');
-          }
-        } else {
-          alert('Usuario inexistente.');
-        }
+    // this._usuarioService.getByEmail(loginData.email)
+    //   .then(usuario => {
+    //     if (usuario != null) {
+    //       if (usuario.contrasena === loginData.contrasena) {
+    //         this._router.navigate(['']);
+    //       } else {
+    //         alert('Contraseña invalida.');
+    //       }
+    //     } else {
+    //       alert('Usuario inexistente.');
+    //     }
+    //   })
+    //   .catch(err => {
+    //     alert("Ha ocurrido un error.");
+    //   })
+
+    this._usuarioService.login(loginData.email, loginData.contrasena)
+      .then(result => {
+        this._router.navigate(['']);
       })
       .catch(err => {
-        alert("Ha ocurrido un error.");
+        alert(err.message);
       })
   }
 

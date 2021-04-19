@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'main-page',
@@ -7,6 +7,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
+  @Input('loggedIn') loggedIn : boolean = false;
   @Output('salir') salirEvent : EventEmitter<void> = new EventEmitter<void>();
 
   constructor() { }
