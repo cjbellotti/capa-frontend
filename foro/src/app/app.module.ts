@@ -11,6 +11,7 @@ import { ComponentsModule } from './components/components.module';
 import { ServicesModule } from './services/services.module';
 import { GuardsModule } from './guards/guards.module';
 import { DropdownModule } from './dropdown/dropdown.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DropdownModule } from './dropdown/dropdown.module';
     BrowserModule,
     AppRoutingModule,
     UsuarioModule,
+    FormsModule,
     TopicModule,
     MainModule,
     ComponentsModule,

@@ -1,12 +1,14 @@
-<div class="dropdown">
-  <div class="value">
-    <span>{{ selected?.name }}</span>
+<div class="dropdown-container">
+  <div class="dropdown">
+    <div class="value">
+      <span>{{ selected?.name }}</span>
+    </div>
+    <div class="toggle-button" (click)="switchToggle()">
+      <mat-icon *ngIf="!toggle">expand_more</mat-icon>
+      <mat-icon *ngIf="toggle">expand_less</mat-icon>
+    </div>
   </div>
-  <div class="toggle-button" (click)="switchToggle()">
-    <mat-icon *ngIf="!toggle">expand_more</mat-icon>
-    <mat-icon *ngIf="toggle">expand_less</mat-icon>
+  <div class="list" *ngIf="toggle">
+    <div class="item" *ngFor="let item of options" (click)="select(item)"><span>{{ item.name }}</span></div>
   </div>
-</div>
-<div class="list">
-
 </div>

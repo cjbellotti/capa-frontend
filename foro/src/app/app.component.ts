@@ -26,7 +26,61 @@ export class AppComponent {
       id : 3,
       name : 'Item 3'
     },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
+    {
+      id : 3,
+      name : 'Item 3'
+    },
   ]
+
+  item : number = null;
 
   constructor(
     public usuarioService : UsuarioService,

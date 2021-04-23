@@ -5,6 +5,9 @@
 
 <main-page (salir)="salir()" [loggedIn]="usuarioService.loggedIn">
   <a [routerLink]="['tabla']" *ngIf="usuarioService.loggedIn">Ir a Tabla</a>
-  <dropdown [options]="opciones"></dropdown>
+  <div style="width : 30%; margin-left : 20px;">
+    <dropdown [options]="opciones" [(ngModel)]="item"></dropdown>
+    <span>{{ item }}</span>
+  </div>
   <router-outlet></router-outlet>
 </main-page>

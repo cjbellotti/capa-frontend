@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -9,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [DropdownComponent],
   imports: [
     CommonModule,
+    FormsModule,
     MatIconModule
   ],
   exports : [

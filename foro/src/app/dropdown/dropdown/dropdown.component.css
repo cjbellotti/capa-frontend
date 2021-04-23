@@ -1,3 +1,8 @@
+.dropdown-container {
+  position: relative;
+  width : 100%;
+}
+
 .dropdown {
   display: flex;
   justify-content: space-between;
@@ -8,4 +13,44 @@
 
 .toggle-button {
   cursor : pointer;
+}
+
+.list {
+  position: absolute;
+  width : 100%;
+  height : 200px;
+  border : 1px solid black;
+  overflow-y : scroll;
+}
+
+.list::-webkit-scrollbar {
+  background-color: white;
+  width : 7px;
+  border-radius: 3px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: #3a3abd;
+  width : 7px;
+  height: 7px;
+  border-radius: 3px;
+}
+.item {
+  width : 100%;
+  height : 30px;
+  line-height: 30px;
+  cursor: default;
+}
+
+.item span {
+  margin-left : 10px;
+}
+
+.item:hover {
+  color : white;
+  background-color: #3a3abd;
+}
+
+.value span {
+  margin-left : 10px;
 }
